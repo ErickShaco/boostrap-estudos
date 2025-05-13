@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+
+        body{
+            background-color: black;
+            color: blueviolet;
+            font: normal 18pt Arial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div#area{
+            background-color: violet;
+            color: black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        div#area2{
+            background-color: violet;
+            color: black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        div#area3{
+            background-color: violet;
+            color: black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        div#area4{
+            background-color: violet;
+            color: black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando Estudos com DOM</h1>
+    <br><br>
+
+    <div id="area" onclick="clicar_area()">Interaja</div>
+
+    <div id="area2" onmouseenter="clicar_area2()" >Interaja</div>
+
+    <div id="area3" onmouseleave="clicar_area3()" >Interaja</div>
+    
+    <div id="area4" onclick="clicar_area4()" onmouseenter="dentro_area4()" onmouseleave="fora_area4()" >Interaja</div>
+<script>
+
+      function clicar_area() {
+        let a = document.getElementById('area')
+        a.innerText = "Clicou!"
+        a.style.background = "red"
+    }
+
+       function clicar_area2() {
+        let b = document.querySelector('div#area2')
+        b.innerText = "Entrou!"
+        b.style.background = "white"
+    }
+
+       function clicar_area3() {
+        let c = document.getElementById('area3')
+        c.innerText = "Saiu!"
+        c.style.background = "blue"
+    }
+
+    function clicar_area4(){
+        let d = document.getElementById('area4')
+        d.innerText = "Unidos Venceremos"
+        d.style.background = "green"
+
+    }
+
+    function dentro_area4(){
+        let d = document.getElementById('area4')
+        d.innerText = "Entrou"
+        d.style.background = "blue"
+    }
+
+    function fora_area4(){
+        let d = document.getElementById('area4')
+        d.innerText = "Sair"
+        d.style.background = "orange"
+    }
+
+
+
+
+</script>
+    
+
+</body>
+</html>
